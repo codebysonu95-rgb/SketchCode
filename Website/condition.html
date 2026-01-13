@@ -15,7 +15,6 @@
             --text-main: #1c1b1f;
             --text-sub: #49454f;
             --border-color: #e0e0e0;
-            --error-color: #b3261e;
         }
 
         body {
@@ -136,31 +135,29 @@
             font-weight: 500;
         }
 
-        /* Contact Box */
-        .contact-section {
-            background-color: #fdf7ff;
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-            border: 1px solid var(--border-color);
+        /* Footer Links */
+        .footer-nav {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
         }
 
-        .contact-section a {
-            color: var(--primary-color);
+        .footer-link {
             text-decoration: none;
-            font-weight: 700;
-            display: block;
-            margin-top: 8px;
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 500;
         }
 
-        /* Footer */
-        footer {
+        .copyright {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
             font-size: 12px;
             color: var(--text-sub);
-            border-top: 1px solid var(--border-color);
         }
 
         .bold { font-weight: 700; color: var(--text-main); }
@@ -177,19 +174,34 @@
     </div>
     <div class="meta-info">Effective Date: January 13, 2026</div>
 
-    <p style="font-size: 14px; color: var(--text-sub);">By using SketchCode Store, you agree to these Terms of Service. These rules ensure a safe and reliable experience for all developers.</p>
+    <p style="font-size: 14px; color: var(--text-sub);">By using SketchCode Store, you agree to these Terms of Service. These guidelines are designed to maintain a fair and secure development environment.</p>
 
     <div class="section">
         <div class="section-header">
             <span class="material-icons-outlined">security</span>
-            <h2>1. Security & Data Protection</h2>
+            <h2>1. Security & Data Management</h2>
         </div>
         <div class="content-body">
-            <p>SketchCode employs industry-standard security measures to ensure the safe delivery of digital assets and source codes.</p>
+            <p>SketchCode utilizes industry-standard security measures for the safe delivery of digital assets.</p>
             <ul>
-                <li>The developer (CodeBySonu) does not guarantee absolute invulnerability against technical breaches or cyber-attacks.</li>
-                <li>We are <span class="bold">not liable</span> for any unauthorized access, data extraction, or third-party misuse of assets once they are downloaded.</li>
-                <li>Users are responsible for maintaining the confidentiality of their own account credentials and downloaded files.</li>
+                <li>The developer (CodeBySonu) provides the platform "as-is" and is not liable for unauthorized access resulting from third-party breaches.</li>
+                <li>Upon successful delivery, users are encouraged to implement their own local security practices to protect their downloaded assets.</li>
+                <li>We do not guarantee that the files will be compatible with all future versions of external software.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">psychology</span>
+            <h2>2. Usage Rights & Modifications</h2>
+        </div>
+        <div class="content-body">
+            <p>All source codes and files are intended for <span class="bold">educational and personal development</span> purposes.</p>
+            <ul>
+                <li>You are free to modify, study, and integrate the code into your own unique projects.</li>
+                <li><span class="bold" style="color:var(--error-color);">Strict Prohibition:</span> Re-uploading the exact same file or substantially similar content back to the SketchCode platform is strictly forbidden.</li>
+                <li>This policy protects the original work of publishers and prevents duplicate content within our community.</li>
             </ul>
         </div>
     </div>
@@ -197,14 +209,14 @@
     <div class="section">
         <div class="section-header">
             <span class="material-icons-outlined">verified_user</span>
-            <h2>2. Content Quality & Integrity</h2>
+            <h2>3. Content Integrity</h2>
         </div>
         <div class="content-body">
-            <p>To maintain a high-quality ecosystem, we enforce strict content guidelines:</p>
+            <p>To ensure trust, we enforce the following:</p>
             <ul>
-                <li>All uploaded Source Codes (SWB), Files, and APKs must correspond exactly with their descriptions.</li>
-                <li>Distribution of broken, malicious, or mismatched content is <span class="bold">strictly prohibited</span>.</li>
-                <li>Publishing unsafe scripts or any form of harmful material will result in immediate termination of the publisher's account.</li>
+                <li>Uploaded content must match its title and description accurately.</li>
+                <li>Malicious scripts or mismatched files intended to deceive users are prohibited.</li>
+                <li>Publishing fake projects to obtain credits will lead to a permanent ban.</li>
             </ul>
         </div>
     </div>
@@ -212,69 +224,38 @@
     <div class="section">
         <div class="section-header">
             <span class="material-icons-outlined">cloud_queue</span>
-            <h2>3. Third-Party Services</h2>
+            <h2>4. Third-Party Services</h2>
         </div>
         <div class="content-body">
-            <p>Some digital assets may be delivered through third-party infrastructure or services (such as Firebase or external hosting).</p>
-            <ul>
-                <li>SketchCode is not responsible for outages, security incidents, or data exposure caused by external platforms beyond our control.</li>
-                <li>Use of these assets is subject to the respective third-party's terms and privacy policies.</li>
-            </ul>
+            <p>Assets may be delivered via third-party services (e.g., Firebase). SketchCode is not responsible for outages or incidents occurring on these external platforms.</p>
         </div>
     </div>
 
     <div class="section">
         <div class="section-header">
-            <span class="material-icons-outlined">monetization_on</span>
-            <h2>4. Paid Content Policy</h2>
+            <span class="material-icons-outlined">visibility</span>
+            <h2>5. Review & Enforcement</h2>
         </div>
         <div class="content-body">
-            <p>We have a zero-tolerance policy regarding financial scams or misleading paid material:</p>
-            <ul>
-                <li>Publishing "Fake Projects" or misleading descriptions to acquire credits/funds is a violation of our core policy.</li>
-                <li>If a project is found to be deceptive, the developer's account will be <span class="bold">permanently banned</span> without prior notice.</li>
-                <li>SketchCode reserves the right to withhold or freeze assets associated with fraudulent activity.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-header">
-            <span class="material-icons-outlined">gavel</span>
-            <h2>5. Enforcement & Reporting</h2>
-        </div>
-        <div class="content-body">
-            <p>Our community safety is driven by user feedback and manual oversight:</p>
-            <ul>
-                <li>Upon receiving a user report, SketchCode administrators will perform a <span class="bold">manual review and investigation</span> of the reported content and the developer's history.</li>
-                <li>Attempting to reverse engineer, exploit, or tamper with the SketchCode delivery system is strictly prohibited and will lead to an immediate ban.</li>
-            </ul>
+            <p>Reports regarding quality or scams will trigger a <span class="bold">manual review and investigation</span> by our team. Tampering with the app's internal delivery system will result in an immediate and permanent account restriction.</p>
         </div>
     </div>
 
     <div class="legal-notice">
-        <h3><span class="material-icons-outlined">info</span> Final Authority Notice</h3>
-        <p>SketchCode (CodeBySonu) reserves the <span class="bold">final and discretionary right</span> to moderate content, restrict access, or suspend any account at its sole discretion, with or without cause, to protect the integrity of the platform and its users.</p>
+        <h3><span class="material-icons-outlined">info</span> Final Authority</h3>
+        <p>SketchCode (CodeBySonu) reserves the <span class="bold">final and discretionary right</span> to remove content or suspend accounts to maintain the safety and integrity of the platform.</p>
     </div>
 
-    <div class="contact-section">
-        <p style="margin: 0; font-size: 14px; color: var(--text-main);">Found a problem or have a question?</p>
-        <a href="mailto:codebysonu95@gmail.com">Contact: codebysonu95@gmail.com</a>
+    <div class="footer-nav">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="index.html" class="footer-link">Download App</a>
+        <a href="refund.html" class="footer-link">Refund & Cancellation Policy</a>
+        <a href="mailto:codebysonu95@gmail.com" class="footer-link">Contact Us</a>
     </div>
 
-    <div class="section" style="margin-top: 30px;">
-        <div class="section-header">
-            <span class="material-icons-outlined">update</span>
-            <h2>6. Policy Modifications</h2>
-        </div>
-        <div class="content-body">
-            <p>These terms may be updated periodically. Continued use of the platform after updates constitutes acceptance of the revised terms.</p>
-        </div>
-    </div>
-
-    <footer>
+    <div class="copyright">
         <p>© 2026 CodeBySonu | SketchCode Store<br>All Rights Reserved.</p>
-    </footer>
+    </div>
 </div>
 
 </body>
