@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - SketchCode</title>
+    <!-- Google Fonts: Roboto & Material Symbols Rounded -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
     <style>
         :root {
             --md-sys-color-primary: #6750A4;
@@ -16,21 +18,16 @@
             --md-sys-color-surface-variant: #E7E0EB;
         }
 
-        /* User's Custom Icon Rendering Fix */
-        .material-icons-rounded {
-            font-family: 'Material Icons Rounded';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;
-            line-height: 1;
-            letter-spacing: normal;
-            text-transform: none;
+        /* Material Symbols Styling */
+        .material-symbols-rounded {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
-            white-space: nowrap;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
             word-wrap: normal;
+            white-space: nowrap;
             direction: ltr;
-            -webkit-font-feature-settings: 'liga';
-            -webkit-font-smoothing: antialiased;
         }
 
         body {
@@ -50,13 +47,14 @@
             padding: 24px;
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            box-sizing: border-box;
         }
 
         .header {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 16px;
+            margin-bottom: 32px;
         }
 
         .back-btn {
@@ -65,14 +63,21 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 4px;
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
+
+        .back-btn:active {
+            background-color: var(--md-sys-color-surface-variant);
         }
 
         h1 {
-            font-size: 22px;
+            font-size: 24px;
             margin: 0;
-            color: var(--md-sys-color-primary);
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface);
         }
 
         section {
@@ -82,8 +87,8 @@
         h2 {
             font-size: 16px;
             font-weight: 700;
-            margin-bottom: 8px;
-            color: #202124;
+            margin-bottom: 12px;
+            color: var(--md-sys-color-primary);
             border-bottom: 1px solid var(--md-sys-color-surface-variant);
             padding-bottom: 4px;
         }
@@ -101,7 +106,7 @@
         .contact-box {
             background: var(--md-sys-color-surface-variant);
             padding: 16px;
-            border-radius: 12px;
+            border-radius: 16px;
             margin-top: 20px;
         }
 
@@ -110,7 +115,7 @@
             margin-top: 40px;
             font-size: 12px;
             color: var(--md-sys-color-outline);
-            padding-bottom: 20px;
+            padding-bottom: 24px;
         }
     </style>
 </head>
@@ -119,13 +124,13 @@
 <div class="container">
     <div class="header">
         <a href="index.html" class="back-btn">
-            <span class="material-icons-rounded">arrow_back</span>
+            <span class="material-symbols-rounded">arrow_back</span>
         </a>
         <h1>Privacy Policy</h1>
     </div>
 
     <section>
-        <p>Last Updated: January 13, 2026</p>
+        <p><b>Last Updated:</b> January 13, 2026</p>
         <p>At <b>SketchCode</b>, accessible from our application, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by SketchCode and how we use it.</p>
     </section>
 
@@ -183,3 +188,4 @@
 
 </body>
 </html>
+
