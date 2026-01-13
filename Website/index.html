@@ -16,6 +16,7 @@
             --md-sys-color-on-surface-variant: #49454F;
             --md-sys-color-outline: #79747E;
             --md-sys-color-secondary-container: #E8DEF8;
+            --telegram-color: #0088cc;
         }
 
         body {
@@ -86,20 +87,41 @@
         .action-area {
             padding: 16px;
             display: flex;
-            gap: 12px;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .btn-download {
-            flex: 1;
             background: var(--md-sys-color-primary);
             color: #fff;
             border: none;
+            padding: 14px;
+            border-radius: 100px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-telegram {
+            background: #e1f5fe;
+            color: var(--telegram-color);
+            border: 1px solid #b3e5fc;
             padding: 12px;
             border-radius: 100px;
             font-weight: 500;
             text-align: center;
             text-decoration: none;
             font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-telegram i {
+            font-size: 18px;
         }
 
         /* App Stats */
@@ -149,7 +171,7 @@
             border: 1px solid var(--md-sys-color-surface-variant);
         }
 
-        /* About Section */
+        /* Content Section */
         .content-section {
             padding: 16px;
         }
@@ -197,7 +219,7 @@
             font-size: 20px;
         }
 
-        /* Footer Links for Razorpay */
+        /* Footer */
         .footer-legal {
             padding: 24px 16px;
             border-top: 1px solid var(--md-sys-color-surface-variant);
@@ -241,6 +263,9 @@
 
     <div class="action-area">
         <a href="#" class="btn-download">Download App</a>
+        <a href="https://t.me/codebysonu95" target="_blank" class="btn-telegram">
+            <i class="material-icons-rounded">campaign</i> Join Telegram for Updates
+        </a>
     </div>
 
     <div class="stats-row">
@@ -306,7 +331,7 @@
             <a href="privacy.html">Privacy Policy</a>
             <a href="condition.html">Terms & Conditions</a>
             <a href="refund.html">Refund & Cancellation Policy</a>
-            <a href="#">Contact Us</a>
+            <a href="mailto:codebysonu95@gmail.com">Contact Us</a>
         </div>
         <p class="copyright">© 2026 CodeBySonu | SketchCode Store</p>
     </footer>
