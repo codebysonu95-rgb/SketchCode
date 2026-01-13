@@ -58,22 +58,23 @@
         .top-app-bar {
             display: flex;
             align-items: center;
-            padding: 16px;
-            gap: 16px;
+            padding: 20px 16px 10px 16px;
+            gap: 20px;
         }
 
         .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 85px;
+            height: 85px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             object-fit: cover;
         }
 
         .app-title-section h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
+            color: #1d1b20;
         }
 
         .dev-name {
@@ -82,7 +83,7 @@
             text-decoration: none;
             display: block;
             margin-top: 4px;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .tag {
@@ -96,12 +97,42 @@
             display: inline-block;
         }
 
-        /* Buttons */
+        /* Stats Row (Now Above Buttons) */
+        .stats-row {
+            display: flex;
+            justify-content: space-around;
+            padding: 16px 0;
+            margin: 10px 16px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            border-right: 1px solid #eee;
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-value {
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+
+        /* Action Buttons (Now Below Stats) */
         .action-area {
-            padding: 16px;
+            padding: 0 16px 16px 16px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
         .btn-download {
@@ -112,69 +143,111 @@
             font-weight: 500;
             text-align: center;
             text-decoration: none;
+            font-size: 15px;
         }
 
         .btn-telegram {
             background: #e1f5fe;
             color: var(--telegram-color);
+            border: 1px solid #b3e5fc;
             padding: 12px;
             border-radius: 100px;
             font-weight: 500;
             text-align: center;
             text-decoration: none;
+            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
 
-        /* Stats */
-        .stats-row {
-            display: flex;
-            justify-content: space-around;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--md-sys-color-surface-variant);
-            margin: 0 16px;
-        }
-
-        .stat-item { text-align: center; flex: 1; }
-        .stat-value { font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 4px; }
-        .stat-label { font-size: 11px; color: var(--md-sys-color-on-surface-variant); }
-
-        /* Screenshots */
+        /* Screenshots Slider (All 5 Included) */
         .screenshot-container {
             display: flex;
             overflow-x: auto;
             gap: 12px;
             padding: 16px;
+            scrollbar-width: none;
         }
         .screenshot-container::-webkit-scrollbar { display: none; }
-        .screenshot-container img { height: 320px; border-radius: 12px; border: 1px solid var(--md-sys-color-surface-variant); }
 
-        /* About */
-        .content-section { padding: 16px; }
-        .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .about-text { font-size: 14px; color: var(--md-sys-color-on-surface-variant); line-height: 1.5; }
-
-        /* Dev Card */
-        .dev-card {
-            margin: 16px 0;
-            padding: 16px;
-            background: var(--md-sys-color-surface-variant);
-            border-radius: 16px;
+        .screenshot-container img {
+            height: 340px;
+            border-radius: 14px;
+            border: 1px solid var(--md-sys-color-surface-variant);
         }
 
-        .dev-info-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-        .dev-info-row span.material-icons-outlined { color: var(--md-sys-color-primary); font-size: 20px; }
+        /* About & Content Section */
+        .content-section { padding: 16px; }
 
-        footer {
-            padding: 24px 16px;
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 { font-size: 19px; margin: 0; }
+
+        .about-text {
+            font-size: 14px;
+            color: var(--md-sys-color-on-surface-variant);
+            line-height: 1.6;
+        }
+
+        /* Dev Contact Card */
+        .dev-card {
+            margin: 8px 0;
+            padding: 20px;
+            background: var(--md-sys-color-surface-variant);
+            border-radius: 20px;
+        }
+
+        .dev-info-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .dev-info-row:last-child { margin-bottom: 0; }
+
+        .dev-info-row .material-icons-outlined {
+            color: var(--md-sys-color-primary);
+            font-size: 24px;
+        }
+
+        .dev-info-text { display: flex; flex-direction: column; }
+        .info-label { font-size: 11px; color: var(--md-sys-color-primary); font-weight: 700; text-transform: uppercase; }
+        .info-value { font-size: 15px; color: var(--md-sys-color-on-surface); font-weight: 500; }
+
+        /* Footer */
+        .footer-legal {
+            padding: 30px 16px;
             border-top: 1px solid var(--md-sys-color-surface-variant);
             text-align: center;
         }
 
-        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 15px; }
-        .footer-links a { font-size: 12px; color: var(--md-sys-color-on-surface-variant); text-decoration: none; }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: var(--md-sys-color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: var(--md-sys-color-outline);
+        }
     </style>
 </head>
 <body>
@@ -187,11 +260,30 @@
     </div>
 
     <div class="top-app-bar">
-        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/icon.png" class="app-icon" alt="Icon">
+        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/icon.png" class="app-icon" alt="SketchCode Icon">
         <div class="app-title-section">
             <h1>SketchCode</h1>
             <span class="dev-name">Code by Sonu</span>
             <div class="tag">Development</div>
+        </div>
+    </div>
+
+    <div class="stats-row">
+        <div class="stat-item">
+            <div class="stat-value">4.7 <span class="material-icons-outlined" style="font-size:14px; color:#fbbc04;">star</span></div>
+            <div class="stat-label">54 reviews</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">12 MB</div>
+            <div class="stat-label">Size</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">3+</div>
+            <div class="stat-label">Rated for 3+</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-value">476</div>
+            <div class="stat-label">Downloads</div>
         </div>
     </div>
 
@@ -202,36 +294,23 @@
         </a>
     </div>
 
-    <div class="stats-row">
-        <div class="stat-item">
-            <div class="stat-value">4.7 <span class="material-icons-outlined" style="font-size:14px;">star</span></div>
-            <div class="stat-label">54 reviews</div>
-        </div>
-        <div class="stat-item" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd;">
-            <div class="stat-value">12 MB</div>
-            <div class="stat-label">Size</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-value">3+</div>
-            <div class="stat-label">Rated for 3+</div>
-        </div>
-        <div class="stat-item" style="border-left: 1px solid #ddd;">
-            <div class="stat-value">476</div>
-            <div class="stat-label">Downloads</div>
-        </div>
-    </div>
-
     <div class="screenshot-container">
-        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/white_screenshots1.jpg" alt="S1">
-        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/white_screenshot2.jpg" alt="S2">
+        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/white_screenshots1.jpg" alt="Screen 1">
+        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/white_screenshot2.jpg" alt="Screen 2">
+        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/white_screenshot3.jpg" alt="Screen 3">
+        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/white_screenshot4.jpg" alt="Screen 4">
+        <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/white_screenshot5.jpg" alt="Screen 5">
     </div>
 
     <div class="content-section">
         <div class="section-header">
             <h2>About this app</h2>
-            <span class="material-icons-outlined">arrow_forward</span>
+            <span class="material-icons-outlined" style="color:var(--md-sys-color-primary);">arrow_forward</span>
         </div>
-        <p class="about-text"><b>SketchCode</b> is a premium platform designed for Sketchware Pro developers. Download now and explore exclusive projects.</p>
+        <p class="about-text">
+            <b>SketchCode</b> is a premium platform designed for Sketchware Pro developers to share and explore high-quality projects and source codes. Our app features secure SWB file encryption, modern Material 3 UI components, and seamless Firebase integrations. <br><br>
+            Whether you are a beginner or an expert, SketchCode simplifies your Android development journey. Download now and explore exclusive projects created by Code by Sonu.
+        </p>
     </div>
 
     <div class="content-section">
@@ -239,27 +318,36 @@
         <div class="dev-card">
             <div class="dev-info-row">
                 <span class="material-icons-outlined">language</span>
-                <span>English</span>
+                <div class="dev-info-text">
+                    <span class="info-label">Language</span>
+                    <span class="info-value">English</span>
+                </div>
             </div>
             <div class="dev-info-row">
                 <span class="material-icons-outlined">email</span>
-                <span>codebysonu95@gmail.com</span>
+                <div class="dev-info-text">
+                    <span class="info-label">Email</span>
+                    <span class="info-value">codebysonu95@gmail.com</span>
+                </div>
             </div>
             <div class="dev-info-row">
                 <span class="material-icons-outlined">location_on</span>
-                <span>Surat, Gujarat, India</span>
+                <div class="dev-info-text">
+                    <span class="info-label">Location</span>
+                    <span class="info-value">Surat, Gujarat, India</span>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer>
+    <footer class="footer-legal">
         <div class="footer-links">
             <a href="privacy.html">Privacy Policy</a>
             <a href="condition.html">Terms & Conditions</a>
             <a href="refund.html">Refund Policy</a>
             <a href="mailto:codebysonu95@gmail.com">Contact Us</a>
         </div>
-        <p style="font-size:11px; color:#999;">© 2026 CodeBySonu | SketchCode Store</p>
+        <p class="copyright">© 2026 CodeBySonu | SketchCode Store</p>
     </footer>
 </div>
 
