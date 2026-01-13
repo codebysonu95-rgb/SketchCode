@@ -16,6 +16,23 @@
             --md-sys-color-surface-variant: #E7E0EB;
         }
 
+        /* User's Custom Icon Rendering Fix */
+        .material-icons-rounded {
+            font-family: 'Material Icons Rounded';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -48,18 +65,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8px;
-            margin-left: -8px;
+            padding: 4px;
             border-radius: 50%;
-            transition: background 0.3s;
-        }
-
-        .back-btn:hover {
-            background: var(--md-sys-color-surface-variant);
-        }
-
-        .material-icons-rounded {
-            font-size: 24px;
         }
 
         h1 {
