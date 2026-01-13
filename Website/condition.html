@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions - SketchCode</title>
+    <title>Terms and Conditions - SketchCode</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     
@@ -15,6 +15,7 @@
             --text-main: #1c1b1f;
             --text-sub: #49454f;
             --border-color: #e0e0e0;
+            --error-color: #b3261e;
         }
 
         body {
@@ -23,14 +24,14 @@
             font-family: 'Google Sans', 'Roboto', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 16px;
+            padding: 20px;
             box-sizing: border-box;
         }
 
@@ -40,7 +41,10 @@
             align-items: center;
             gap: 16px;
             padding: 12px 0;
-            margin-bottom: 10px;
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            z-index: 10;
         }
 
         .back-btn {
@@ -48,75 +52,100 @@
             color: var(--text-main);
             display: flex;
             align-items: center;
+            padding: 8px;
+            border-radius: 50%;
         }
+        
+        .back-btn:active { background: var(--surface-color); }
 
         .top-bar h1 {
             font-size: 22px;
             margin: 0;
-            font-weight: 500;
+            font-weight: 700;
         }
 
-        .last-updated {
-            font-size: 12px;
+        .meta-info {
+            font-size: 13px;
             color: var(--text-sub);
-            margin-bottom: 24px;
-        }
-
-        /* Policy Sections */
-        .section {
-            margin-bottom: 24px;
-            padding-bottom: 16px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
             border-bottom: 1px solid var(--border-color);
         }
 
-        .section:last-child {
-            border-bottom: none;
+        /* Content Sections */
+        .section {
+            margin-bottom: 28px;
         }
 
-        .section-title {
+        .section-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 17px;
-            font-weight: 700;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .section-header i {
             color: var(--primary-color);
-            margin-bottom: 10px;
+            font-size: 22px;
         }
 
-        .section-title i {
-            font-size: 20px;
+        .section-header h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            color: var(--text-main);
         }
 
-        .content {
+        .content-body {
             font-size: 14px;
             color: var(--text-sub);
-            text-align: justify;
+            padding-left: 34px;
         }
 
-        /* Highlight Card */
-        .highlight-card {
+        .content-body p { margin: 0 0 12px 0; }
+
+        .content-body ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .content-body li { margin-bottom: 8px; }
+
+        /* Protection Box */
+        .legal-notice {
             background-color: var(--surface-color);
-            padding: 16px;
-            border-radius: 16px;
-            margin: 20px 0;
-            border: 1px dashed var(--primary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
         }
 
-        .highlight-card p {
+        .legal-notice h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legal-notice p {
             margin: 0;
             font-size: 13px;
+            color: var(--text-main);
             font-weight: 500;
-            color: var(--primary-color);
         }
 
         /* Footer */
-        .footer-note {
+        footer {
             text-align: center;
+            padding: 40px 20px;
             font-size: 12px;
-            color: #888;
-            margin-top: 40px;
-            padding: 20px;
+            color: var(--text-sub);
+            border-top: 1px solid var(--border-color);
         }
+
+        .bold { font-weight: 700; color: var(--text-main); }
     </style>
 </head>
 <body>
@@ -126,71 +155,89 @@
         <a href="index.html" class="back-btn">
             <span class="material-icons-outlined">arrow_back</span>
         </a>
-        <h1>Terms & Conditions</h1>
+        <h1>Terms of Service</h1>
     </div>
-    <div class="last-updated">Last Updated: January 2026</div>
+    <div class="meta-info">Effective Date: January 13, 2026</div>
+
+    <p style="font-size: 14px; color: var(--text-sub);">Please read these Terms and Conditions carefully before using the SketchCode Store. By accessing or using our platform, you agree to be bound by these terms.</p>
 
     <div class="section">
-        <div class="section-title">
-            <span class="material-icons-outlined">gavel</span>
-            App Review & Reporting
-        </div>
-        <div class="content">
-            Agar kisi user ne kisi app ya project par report kiya, to <strong>SketchCode</strong> manually us app aur developer ko review karega. Review ke basis par content ko remove ya developer account ko suspend kiya ja sakta hai.
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">
-            <span class="material-icons-outlined">lock</span>
-            Security & Protection
-        </div>
-        <div class="content">
-            Hum paid files aur codes ko deliver karne ke liye industry-standard security methods aur encryption ka use karte hain. Halanki, developer kisi bhi unauthorized access, extraction, ya misuse ki 100% guarantee nahi leta aur iske liye responsible nahi hoga.
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">
-            <span class="material-icons-outlined">report_problem</span>
-            Invalid / Unsafe Content
-        </div>
-        <div class="content">
-            Galat codes, mismatched files, ya unsafe/malicious APKs upload karna strictly prohibited hai. Aapka code, file aur APK description se match hona mandatory hai. Kisi bhi tarah ka harmful ya misleading content allow nahi kiya jayega.
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">
-            <span class="material-icons-outlined">payments</span>
-            Paid Content Abuse
-        </div>
-        <div class="content">
-            Paid codes ke naam par scam, fake content, ya misleading information dena mana hai. Aise paye jane par account bina kisi prior notice ke <strong>immediately suspend</strong> ya permanently ban kar diya jayega.
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">
+        <div class="section-header">
             <span class="material-icons-outlined">security</span>
-            Suspicious Activity
+            <h2>1. Security & Data Protection</h2>
         </div>
-        <div class="content">
-            App ke system, codes, ya delivery mechanism ke saath tampering, modification, reverse engineering, ya exploitation ki koshish karna mana hai. Aisi kisi bhi activity par permanent ban lagaya jayega.
+        <div class="content-body">
+            <p>SketchCode employs industry-standard security protocols, including advanced encryption techniques, to ensure the safe delivery of digital assets and source codes.</p>
+            <ul>
+                <li>The developer (CodeBySonu) does not guarantee absolute invulnerability against sophisticated cyber-attacks.</li>
+                <li>We are <span class="bold">not liable</span> for any unauthorized access, data extraction, or third-party misuse of assets once they are downloaded.</li>
+                <li>Users are responsible for maintaining the confidentiality of their own account credentials.</li>
+            </ul>
         </div>
     </div>
 
-    <div class="highlight-card">
-        <p>⚠️ IMPORTANT NOTE: Developer ke paas account suspension, content removal, aur access restriction ka final decision lene ka pura adhikaar (Full Right) hai.</p>
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">verified_user</span>
+            <h2>2. Content Quality & Integrity</h2>
+        </div>
+        <div class="content-body">
+            <p>To maintain a high-quality ecosystem, we enforce strict content guidelines:</p>
+            <ul>
+                <li>All uploaded Source Codes (SWB), Files, and APKs must correspond exactly with their descriptions.</li>
+                <li>Distribution of broken, malicious, or mismatched content is <span class="bold">strictly prohibited</span>.</li>
+                <li>Publishing unsafe scripts, viruses, or any form of harmful material will result in immediate termination of the publisher's account.</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="content" style="font-size: 13px; font-style: italic;">
-        * Terms & Conditions samay-samay par update ho sakti hain. Hum recommend karte hain ki aap ise regular check karte rahein.
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">monetization_on</span>
+            <h2>3. Paid Content Policy</h2>
+        </div>
+        <div class="content-body">
+            <p>We have a zero-tolerance policy regarding financial scams or misleading paid material:</p>
+            <ul>
+                <li>Publishing "Fake Projects" or misleading descriptions to acquire credits/funds is a violation of our core policy.</li>
+                <li>If a project is found to be deceptive, the developer's account will be <span class="bold">permanently banned</span> without prior notice.</li>
+                <li>SketchCode reserves the right to withhold or freeze assets associated with fraudulent activity.</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="footer-note">
-        © 2026 CodeBySonu | SketchCode Store
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">gavel</span>
+            <h2>4. Enforcement & Reporting</h2>
+        </div>
+        <div class="content-body">
+            <p>Our community safety is driven by user feedback and manual oversight:</p>
+            <ul>
+                <li>Upon receiving a user report, SketchCode administrators will perform a <span class="bold">Manual Forensic Audit</span> of the reported content and the developer's history.</li>
+                <li>Attempting to reverse engineer, exploit, or tamper with the SketchCode delivery system is strictly prohibited.</li>
+            </ul>
+        </div>
     </div>
+
+    <div class="legal-notice">
+        <h3><span class="material-icons-outlined">info</span> Final Authority Notice</h3>
+        <p>SketchCode (CodeBySonu) reserves the absolute and final right to moderate content, restrict access, or suspend any account at its sole discretion, with or without cause, to protect the integrity of the platform and its users.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">update</span>
+            <h2>5. Policy Modifications</h2>
+        </div>
+        <div class="content-body">
+            <p>These terms may be updated periodically to reflect changes in our services or legal obligations. Continued use of the platform after updates constitutes acceptance of the revised terms.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 CodeBySonu | SketchCode Store<br>All Rights Reserved.</p>
+    </footer>
 </div>
 
 </body>
