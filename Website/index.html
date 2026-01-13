@@ -34,29 +34,56 @@
             background: #fff;
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Top Bar */
+        /* Material 3 Sticky Toolbar */
+        .toolbar {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+            border-bottom: 1px solid var(--md-sys-color-surface-variant);
+        }
+
+        .toolbar-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--md-sys-color-on-surface);
+            margin: 0;
+        }
+
+        .toolbar i {
+            color: var(--md-sys-color-on-surface-variant);
+            cursor: pointer;
+        }
+
+        /* Top Info Bar */
         .top-app-bar {
             display: flex;
             align-items: center;
-            padding: 16px;
-            gap: 16px;
+            padding: 20px 16px;
+            gap: 20px;
         }
 
         .app-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 18px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 85px;
+            height: 85px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
             object-fit: cover;
         }
 
         .app-title-section h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
-            color: #202124;
+            color: #1d1b20;
         }
 
         .dev-name {
@@ -65,11 +92,11 @@
             text-decoration: none;
             display: block;
             margin-top: 4px;
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .category-tags {
-            margin-top: 8px;
+            margin-top: 10px;
             display: flex;
             gap: 8px;
         }
@@ -85,7 +112,7 @@
 
         /* Action Buttons */
         .action-area {
-            padding: 16px;
+            padding: 0 16px 16px 16px;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -101,7 +128,6 @@
             text-align: center;
             text-decoration: none;
             font-size: 15px;
-            transition: opacity 0.2s;
         }
 
         .btn-telegram {
@@ -120,27 +146,27 @@
             gap: 8px;
         }
 
-        .btn-telegram i {
-            font-size: 18px;
-        }
-
-        /* App Stats */
+        /* Stats Row */
         .stats-row {
             display: flex;
             justify-content: space-around;
             padding: 16px 0;
+            border-top: 1px solid var(--md-sys-color-surface-variant);
             border-bottom: 1px solid var(--md-sys-color-surface-variant);
-            margin: 0 16px;
+            margin: 16px;
         }
 
         .stat-item {
             text-align: center;
             flex: 1;
+            border-right: 1px solid #eee;
         }
+
+        .stat-item:last-child { border-right: none; }
 
         .stat-value {
             font-weight: 700;
-            font-size: 14px;
+            font-size: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -152,29 +178,24 @@
             color: var(--md-sys-color-on-surface-variant);
         }
 
-        /* Screenshots Slider */
+        /* Screenshots */
         .screenshot-container {
             display: flex;
             overflow-x: auto;
             gap: 12px;
             padding: 16px;
-            scroll-behavior: smooth;
+            scrollbar-width: none;
         }
-
-        .screenshot-container::-webkit-scrollbar {
-            display: none;
-        }
+        .screenshot-container::-webkit-scrollbar { display: none; }
 
         .screenshot-container img {
-            height: 320px;
-            border-radius: 12px;
+            height: 340px;
+            border-radius: 14px;
             border: 1px solid var(--md-sys-color-surface-variant);
         }
 
         /* Content Section */
-        .content-section {
-            padding: 16px;
-        }
+        .content-section { padding: 16px; }
 
         .section-header {
             display: flex;
@@ -183,47 +204,62 @@
             margin-bottom: 12px;
         }
 
-        .section-header h2 {
-            font-size: 18px;
-            margin: 0;
-        }
-
-        .arrow-icon {
-            width: 20px;
-            height: 20px;
-        }
+        .section-header h2 { font-size: 19px; margin: 0; }
 
         .about-text {
             font-size: 14px;
             color: var(--md-sys-color-on-surface-variant);
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
-        /* Developer Card */
+        /* Developer Card Fixed */
         .dev-card {
-            margin: 16px;
-            padding: 16px;
+            margin: 8px 0;
+            padding: 20px;
             background: var(--md-sys-color-surface-variant);
-            border-radius: 16px;
+            border-radius: 20px;
         }
 
         .dev-info-row {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
+            gap: 16px;
+            margin-bottom: 16px;
         }
+
+        .dev-info-row:last-child { margin-bottom: 0; }
 
         .dev-info-row i {
             color: var(--md-sys-color-primary);
-            font-size: 20px;
+            font-size: 24px;
+            font-style: normal; /* Fix for italic look */
+        }
+
+        .dev-info-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: var(--md-sys-color-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 15px;
+            color: var(--md-sys-color-on-surface);
+            font-weight: 500;
         }
 
         /* Footer */
         .footer-legal {
-            padding: 24px 16px;
+            padding: 30px 16px;
             border-top: 1px solid var(--md-sys-color-surface-variant);
             text-align: center;
+            background: #fafafa;
         }
 
         .footer-links {
@@ -235,9 +271,10 @@
         }
 
         .footer-links a {
-            font-size: 12px;
-            color: var(--md-sys-color-on-surface-variant);
+            font-size: 13px;
+            color: var(--md-sys-color-primary);
             text-decoration: none;
+            font-weight: 500;
         }
 
         .copyright {
@@ -249,11 +286,17 @@
 <body>
 
 <div class="main-container">
+    <div class="toolbar">
+        <i class="material-icons-rounded">arrow_back</i>
+        <h1 class="toolbar-title">App Details</h1>
+        <i class="material-icons-rounded">share</i>
+    </div>
+
     <div class="top-app-bar">
         <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/main/Website/icon.png" class="app-icon" alt="SketchCode Icon">
         <div class="app-title-section">
             <h1>SketchCode</h1>
-            <a href="#" class="dev-name">Code by Sonu</a>
+            <span class="dev-name">Code by Sonu</span>
             <div class="category-tags">
                 <span class="tag">Development</span>
                 <span class="tag">Tools</span>
@@ -264,15 +307,16 @@
     <div class="action-area">
         <a href="#" class="btn-download">Download App</a>
         <a href="https://t.me/codebysonu95" target="_blank" class="btn-telegram">
-    Join Telegram for Updates
+            <i class="material-icons-rounded">campaign</i> Join Telegram for Updates
         </a>
+    </div>
 
     <div class="stats-row">
         <div class="stat-item">
-            <div class="stat-value">4.7 <i class="material-icons-rounded" style="font-size: 14px;">star</i></div>
+            <div class="stat-value">4.7 <i class="material-icons-rounded" style="font-size: 14px; color: #fbbc04;">star</i></div>
             <div class="stat-label">54 reviews</div>
         </div>
-        <div class="stat-item" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd;">
+        <div class="stat-item">
             <div class="stat-value">12 MB</div>
             <div class="stat-label">Size</div>
         </div>
@@ -280,7 +324,7 @@
             <div class="stat-value">3+</div>
             <div class="stat-label">Rated for 3+</div>
         </div>
-        <div class="stat-item" style="border-left: 1px solid #ddd;">
+        <div class="stat-item">
             <div class="stat-value">476</div>
             <div class="stat-label">Downloads</div>
         </div>
@@ -297,7 +341,7 @@
     <div class="content-section">
         <div class="section-header">
             <h2>About this app</h2>
-            <img src="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/a3182b383d7de58b4fef0e92a431f212b0034024/Website/errow_forward.png" class="arrow-icon" alt="forward">
+            <i class="material-icons-rounded" style="color: var(--md-sys-color-primary);">arrow_forward</i>
         </div>
         <p class="about-text">
             <b>SketchCode</b> is a premium platform designed for Sketchware Pro developers to share and explore high-quality projects and source codes. Our app features secure SWB file encryption, modern Material 3 UI components, and seamless Firebase integrations. <br><br>
@@ -312,15 +356,24 @@
         <div class="dev-card">
             <div class="dev-info-row">
                 <i class="material-icons-rounded">language</i>
-                <span>English</span>
+                <div class="dev-info-text">
+                    <span class="info-label">language</span>
+                    <span class="info-value">English</span>
+                </div>
             </div>
             <div class="dev-info-row">
                 <i class="material-icons-rounded">email</i>
-                <span>codebysonu95@gmail.com</span>
+                <div class="dev-info-text">
+                    <span class="info-label">email</span>
+                    <span class="info-value">codebysonu95@gmail.com</span>
+                </div>
             </div>
             <div class="dev-info-row">
                 <i class="material-icons-rounded">location_on</i>
-                <span>Surat, Gujarat, India</span>
+                <div class="dev-info-text">
+                    <span class="info-label">location</span>
+                    <span class="info-value">Surat, Gujarat, India</span>
+                </div>
             </div>
         </div>
     </div>
@@ -329,7 +382,7 @@
         <div class="footer-links">
             <a href="privacy.html">Privacy Policy</a>
             <a href="condition.html">Terms & Conditions</a>
-            <a href="refund.html">Refund & Cancellation Policy</a>
+            <a href="refund.html">Refund & Cancellation</a>
             <a href="mailto:codebysonu95@gmail.com">Contact Us</a>
         </div>
         <p class="copyright">© 2026 CodeBySonu | SketchCode Store</p>
