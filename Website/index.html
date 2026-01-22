@@ -97,7 +97,7 @@
             display: inline-block;
         }
 
-        /* Stats Row */
+        /* Stats Row (Rating, Size, Downloads) */
         .stats-row {
             display: flex;
             justify-content: space-around;
@@ -127,7 +127,7 @@
             color: var(--md-sys-color-on-surface-variant);
         }
 
-        /* Action Buttons */
+        /* Action Buttons Area */
         .action-area {
             padding: 0 16px 16px 16px;
             display: flex;
@@ -178,7 +178,7 @@
             border: 1px solid var(--md-sys-color-surface-variant);
         }
 
-        /* About & Content Section */
+        /* About Section */
         .content-section { padding: 16px; }
 
         .section-header {
@@ -196,7 +196,7 @@
             line-height: 1.6;
         }
 
-        /* Dev Contact Card */
+        /* Developer Contact Card */
         .dev-card {
             margin: 8px 0;
             padding: 20px;
@@ -209,7 +209,7 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 16px;
-            cursor: pointer; /* Clickable look */
+            cursor: pointer;
         }
 
         .dev-info-row:last-child { margin-bottom: 0; }
@@ -275,7 +275,7 @@
             <div class="stat-label">54 reviews</div>
         </div>
         <div class="stat-item">
-            <div class="stat-value">12 MB</div>
+            <div class="stat-value">13 MB</div>
             <div class="stat-label">Size</div>
         </div>
         <div class="stat-item">
@@ -289,7 +289,8 @@
     </div>
 
     <div class="action-area">
-        <a href="#" class="btn-download">Download App</a>
+        <a href="https://raw.githubusercontent.com/codebysonu95-rgb/SketchCode/d7f1d81a0a262742977d675b9696f604d9638ce6/Website/SkechCode_2.0.apk" class="btn-download" download>Download App</a>
+        
         <a href="https://t.me/codebysonu95" target="_blank" class="btn-telegram">
             <span class="material-icons-outlined">campaign</span> Join Telegram for Updates
         </a>
@@ -354,27 +355,24 @@
 
 <script>
     const shareBtn = document.getElementById('shareBtn');
-    
     shareBtn.addEventListener('click', async () => {
         if (navigator.share) {
             try {
                 await navigator.share({
                     title: 'SketchCode - Code by Sonu',
-                    text: 'Download SketchCode Store and explore high-quality Sketchware projects!',
+                    text: 'Download SketchCode Store for premium Sketchware projects!',
                     url: window.location.href
                 });
-                console.log('Successfully shared');
-            } catch (error) {
-                console.log('Error sharing:', error);
+            } catch (err) {
+                console.log('Share failed:', err);
             }
         } else {
-            // Fallback: Copy to clipboard if Web Share API is not supported
-            const dummy = document.createElement('input');
-            document.body.appendChild(dummy);
-            dummy.value = window.location.href;
-            dummy.select();
+            const el = document.createElement('textarea');
+            el.value = window.location.href;
+            document.body.appendChild(el);
+            el.select();
             document.execCommand('copy');
-            document.body.removeChild(dummy);
+            document.body.removeChild(el);
             alert('Link copied to clipboard!');
         }
     });
