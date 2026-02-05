@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload & Publisher Policy - SketchCode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6750A4;
+            --bg-color: #fffbff;
+            --surface-color: #f3edf7;
+            --text-main: #1c1b1f;
+            --text-sub: #49454f;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Google Sans', 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Sticky Toolbar */
+        .toolbar {
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .toolbar-title {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+        }
+
+        .meta-info {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin: 20px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Detailed Section Styling */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .section-header span {
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .section-header h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .content {
+            font-size: 14px;
+            color: var(--text-sub);
+            padding-left: 36px;
+        }
+
+        .content p { margin: 8px 0; }
+
+        .content ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .content li { margin-bottom: 10px; }
+
+        /* Highlight Logic Card */
+        .logic-card {
+            background-color: var(--surface-color);
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 5px solid var(--primary-color);
+            margin: 30px 0;
+        }
+
+        .logic-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer-nav {
+            margin-top: 50px;
+            padding: 24px 0;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .footer-link {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .bold { font-weight: 700; color: var(--text-main); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="toolbar">
+        <a href="index.html" class="back-btn">
+            <span class="material-icons-outlined">arrow_back</span>
+        </a>
+        <h1 class="toolbar-title">Upload & Publisher Policy</h1>
+    </div>
+
+    <div class="meta-info">Last Updated: January 2026</div>
+
+    <section>
+        <p style="font-size: 14px; color: var(--text-sub);">This policy explains how users can upload projects and the rules they must follow on SketchCode. By contributing to our platform, you help build a better development ecosystem.</p>
+    </section>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">person_outline</span>
+            <h2>1. Eligibility for Upload</h2>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Only registered users with a valid account may upload projects to SketchCode.</li>
+                <li>The uploader must be the original creator of the project or possess the legal authorization and rights required for public sharing.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">task_alt</span>
+            <h2>2. Upload Guidelines</h2>
+        </div>
+        <div class="content">
+            <p>When uploading an app, project, or source code, you must ensure the following:</p>
+            <ul>
+                <li><span class="bold">Completeness:</span> All shared files must be complete, functional, and ready for use.</li>
+                <li><span class="bold">Accuracy:</span> The project title, description, and screenshots must accurately reflect the actual content of the files.</li>
+                <li><span class="bold">No Deception:</span> Fake previews or misleading information intended to gain attention or downloads is strictly prohibited.</li>
+                <li><span class="bold">Testing:</span> All projects must be thoroughly tested for errors and bugs before submission.</li>
+                <li><span class="bold">Formats:</span> Only supported formats such as APK, ZIP, SWB, and other standard source files are permitted.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">block</span>
+            <h2>3. Prohibited Uploads</h2>
+        </div>
+        <div class="content">
+            <p>The following content types are <span class="bold">strictly forbidden</span> and will result in immediate removal:</p>
+            <ul>
+                <li>Broken, incomplete, or corrupted files that cannot be executed.</li>
+                <li>Malware, spyware, viruses, or any scripts designed for harmful activities.</li>
+                <li>Fake projects, cloned content without modification, or low-effort "spam" uploads.</li>
+                <li>Copyrighted, stolen, or pirated material shared without permission.</li>
+                <li>Illegal, adult, or offensive content.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="logic-card">
+        <h3><span class="material-icons-outlined" style="vertical-align: middle;">public</span> Public Access & Modification Rights</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: var(--text-sub);">
+            By uploading to SketchCode, you acknowledge that your source code becomes <span class="bold">publicly accessible</span>. Users are permitted to download, edit, and modify your code for educational and development purposes. 
+            <br><br>
+            <span class="bold">Liability Disclaimer:</span> The uploader is <span class="bold">not responsible</span> for any consequences, modifications, or misuse of the code by other users once it is public. All projects are shared for educational purposes only.
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">warning_amber</span>
+            <h2>4. Incorrect or Misleading Uploads</h2>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Content that violates accuracy standards may be removed without prior notice.</li>
+                <li>In minor cases, the user may receive a formal warning via the platform.</li>
+                <li>Repeated violations of data accuracy may lead to temporary or permanent account suspension.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">report</span>
+            <h2>5. Report Handling & Abuse</h2>
+        </div>
+        <div class="content">
+            <ul>
+                <li>Community members may report projects that are broken, fake, stolen, or unsafe.</li>
+                <li>Projects receiving multiple valid reports will undergo a <span class="bold">manual investigation</span> by the moderation team.</li>
+                <li>Accounts found abusing the report system or frequently uploading violating content may be permanently banned.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">gavel</span>
+            <h2>6. Moderation & Review</h2>
+        </div>
+        <div class="content">
+            <p>SketchCode reserves the final and discretionary right to approve, reject, edit metadata, or remove any content at any time to protect the platform's integrity.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">security</span>
+            <h2>7. Policy Violations</h2>
+        </div>
+        <div class="content">
+            <p>Any attempt to bypass moderation, manipulate report systems, or upload harmful content will result in <span class="bold">immediate suspension</span> and a permanent ban from the SketchCode Store.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">update</span>
+            <h2>8. Policy Updates</h2>
+        </div>
+        <div class="content">
+            <p>This policy may be updated at any time to reflect platform changes. Continued use of the platform and its upload features constitutes acceptance of the latest rules.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">
+            <span class="material-icons-outlined">mail</span>
+            <h2>9. Contact Support</h2>
+        </div>
+        <div class="content">
+            <p>For questions related to uploads or to appeal a moderation decision, contact us at:</p>
+            <p><span class="bold">Email:</span> <a href="mailto:codebysonu95@gmail.com" style="color:var(--primary-color); text-decoration:none;">codebysonu95@gmail.com</a></p>
+        </div>
+    </div>
+
+    <div class="footer-nav">
+        <a href="index.html" class="footer-link">Home Page</a>
+        <a href="condition.html" class="footer-link">Terms of Service</a>
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="Donation.html" class="footer-link">Donation & Support Policy</a>
+    </div>
+
+    <footer>
+        <p style="text-align: center; font-size: 11px; color: #999;">© 2026 CodeBySonu | SketchCode Store</p>
+    </footer>
+</div>
+
+</body>
+</html>
